@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { Redirect, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Error from './views/error/error.view';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
+import { routesSite } from './const/routes.const';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Header></Header>
+        <Switch>
+          <Route path="/error" render={() => <Error />} />
+          {routesSite.map((route, index) => (
+          <Route key={index} path={route.path} render={route.component} exact />
+          ))}
+        <Redirect to="/error" />
+      </Switch>
+      <Footer></Footer>
+      </Router>
   );
 }
 
