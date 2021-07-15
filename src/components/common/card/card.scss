@@ -1,0 +1,21 @@
+@import "../../../assets/styles/global.scss";
+.card {
+  width: 20vw;
+  background-color: $CD200;
+  border-radius: 0.5vw;
+  padding: 5%;
+  height: 95%;
+  .title {
+    font-family: Avenir-Heavy, Arial, Helvetica, sans-serif;
+    color: $I850;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  .contentImage {
+    width: 100%;
+    img {
+      width: 100%;
+      border-radius: 0.5vw;
+    }
+  }
+}

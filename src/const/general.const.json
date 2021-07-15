@@ -1,0 +1,5 @@
+{
+  "api_url": "https://api.themoviedb.org/3/",
+  "api_key":"36a3965b2cc67df4030abe290766a730",
+  "api_image":"https://image.tmdb.org/t/p/w500"
+}

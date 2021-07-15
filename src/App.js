@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Redirect, Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Error from './views/error/error.view';
 import Footer from './components/footer/Footer';

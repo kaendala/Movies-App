@@ -8,7 +8,7 @@ export const routesSite = [
     component: Search,
   },
   {
-    path: '/detail/:idMovie?',
+    path: '/detail/:movieId?',
     component: Detail,
   },
   {

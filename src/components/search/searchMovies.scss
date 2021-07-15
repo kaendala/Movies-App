@@ -1,0 +1,70 @@
+@import "../../assets/styles/global.scss";
+.ContentSearch {
+  .search {
+    width: 60%;
+    background-color: $B600;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: $CL0;
+    display: flex;
+    align-items: center;
+    padding: 1% 2%;
+    border-radius: 0.5vw;
+    position: relative;
+    input {
+      width: 91%;
+      margin-left: 2%;
+      border-radius: 30px;
+      height: 30px;
+      padding: 0 7% 0 3%;
+      font-size: 1.11vw;
+      cursor: pointer;
+      &::placeholder {
+        color: $CD400;
+      }
+      &:focus {
+        border-color: $CL800;
+        background-color: $CL0;
+        outline: none;
+        color: $CD800;
+      }
+    }
+    .icon {
+      position: absolute;
+      right: 5%;
+      color: $CD200;
+      padding: 1%;
+      cursor: pointer;
+      transition: 0.5ms;
+      &:hover {
+        color: $CD400;
+        transition: 0.5ms;
+        transform: scale(1.5);
+      }
+    }
+  }
+  .generalTitle {
+    text-align: center;
+    margin: 20px 0;
+    h3 {
+      font-family: Avenir-Heavy, Arial, Helvetica, sans-serif;
+    }
+  }
+  .ContentMovies {
+    width: 90%;
+    margin: 0 auto;
+    ul {
+      list-style: none;
+      display: grid;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin: 0;
+      padding: 0;
+      grid-gap: 1.5vw 1.6%;
+      gap: 1.5vw 1.6%;
+      grid-template-columns: 24% 24% 24% 24%;
+      li {
+      }
+    }
+  }
+}
