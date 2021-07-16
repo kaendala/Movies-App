@@ -1,21 +1,56 @@
 @import "../../../assets/styles/global.scss";
-.card {
-  width: 20vw;
-  background-color: $CD200;
-  border-radius: 0.5vw;
-  padding: 5%;
-  height: 95%;
-  .title {
-    font-family: Avenir-Heavy, Arial, Helvetica, sans-serif;
-    color: $I850;
-    margin-bottom: 8px;
-    text-align: center;
-  }
-  .contentImage {
-    width: 100%;
-    img {
+.contentCard {
+  position: relative;
+  transition: 300ms;
+  .card {
+    width: 18vw;
+    background-color: $B800;
+    border-radius: 0.5vw;
+    padding: 5%;
+    height: 95%;
+    .title {
+      font-family: Avenir-Heavy, Arial, Helvetica, sans-serif;
+      color: $CD800;
+      margin-bottom: 8px;
+      text-align: center;
+      width: 90%;
+    }
+    .contentImage {
       width: 100%;
-      border-radius: 0.5vw;
+      img {
+        width: 100%;
+        border-radius: 0.5vw;
+      }
+    }
+  }
+  .icofont-ui-love {
+    position: absolute;
+    font-size: 30px;
+    right: 1%;
+    top: 1%;
+    &.favorite {
+      color: $R200;
+    }
+    &.noFavorite {
+      color: $CL0;
+    }
+  }
+  &:hover {
+    transition: 300ms;
+    transform: scale(1.1);
+  }
+}
+@media (max-width: 768px) {
+  .contentCard {
+    .card {
+      width: 25vw;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .contentCard {
+    .card {
+      width: 81vw;
     }
   }
 }

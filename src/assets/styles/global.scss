@@ -1,43 +1,14 @@
-$I200: #eeeeee;
-$I300: #e3ecee;
-$I400: #bdbdbd;
-$I600: #757575;
-$I800: #424242;
-$I850: #16212a;
-$I900: #000000;
-$R200: #ff0000;
-$R400: #ef0c1b;
-$R600: #cc0c1b;
-$R800: #610c1b;
+$B100: #e4e9ef;
+$B400: #79bcde;
+$B600: #0ed5ea;
+$B800: #7ba2b5;
 $CD100: #c4c4c4;
 $CD200: #b0bec5;
 $CD400: #78909c;
 $CD600: #546e7a;
-$CD800: #1f2b36;
-$CD900: #0e161c;
+$CD800: #063b6b;
 $CL0: #ffffff;
-$CL200: #f9f9f9;
-$CL400: #eceff1;
-$CL500: #dce9ef;
-$CL600: #cfd8dc;
-$CL800: #cfdde2;
-$S200: #ed9188;
-$S400: #f27b6b;
-$S600: #f76346;
-$S800: #ea3409;
-$A100: #ffeacc;
-$A200: #ffe082;
-$A400: #ffca28;
-$A600: #ffb300;
-$A800: #ff9700;
-$EX200: #06bf36;
-$EX400: #04a004;
-$EX600: #018802;
-$EX800: #036b03;
-$B200: #2576a5;
-$B400: #2e67ae;
-$B600: #004d9a;
-$B800: #25217a;
+$R200: #f2a6a6;
 /*Fonts*/
 @font-face {
   font-family: Avenir-Book;
@@ -62,6 +33,12 @@ h6 {
   font-weight: 100;
   font-family: Avenir-book, Arial, Helvetica, sans-serif;
   color: inherit;
+}
+body {
+  color: $CD800;
+}
+strong {
+  font-family: Avenir-Black, Arial, Helvetica, sans-serif;
 }
 h1 {
   font-size: 2.22vw;

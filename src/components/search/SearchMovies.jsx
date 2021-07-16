@@ -23,7 +23,6 @@ const SearchMovies = () => {
   }, [query]);
 
   const handleKeyPress = async (event, input) => {
-    debugger;
     if (event.key === "Enter") {
       setQuery(input.current.value);
     }
@@ -52,14 +51,21 @@ const SearchMovies = () => {
         <h3>{query ? "Results" : "Most popular"}</h3>
       </div>
       <div className="ContentMovies">
-        <ul>
+        <div className="contentCards">
           {listMovies &&
             listMovies.map((movie, index) => (
-              <li>
-                <Card movie={movie}></Card>
-              </li>
+              <Card key={index} movie={movie}></Card>
             ))}
-        </ul>
+        </div>
+        <div>
+          {!listMovies ||
+            (listMovies.length === 0 && (
+              <h2 className="noResults">
+                we are sorry at this moment we haven't results with this
+                parameter, please change your search parameter{" "}
+              </h2>
+            ))}
+        </div>
       </div>
     </div>
   );

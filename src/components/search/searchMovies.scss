@@ -2,10 +2,9 @@
 .ContentSearch {
   .search {
     width: 60%;
-    background-color: $B600;
     margin: 0 auto;
     margin-top: 20px;
-    color: $CL0;
+    color: $CD800;
     display: flex;
     align-items: center;
     padding: 1% 2%;
@@ -15,18 +14,23 @@
       width: 91%;
       margin-left: 2%;
       border-radius: 30px;
-      height: 30px;
-      padding: 0 7% 0 3%;
-      font-size: 1.11vw;
+      padding: 1% 7% 1% 3%;
+      font-size: 16px;
       cursor: pointer;
+      color: $CD400;
+      border: 1px solid $CD800;
+      transition: 3ms;
       &::placeholder {
         color: $CD400;
       }
       &:focus {
-        border-color: $CL800;
+        transform: scale(1.03);
+        transition: 3ms;
+        border-color: $CD800;
         background-color: $CL0;
         outline: none;
         color: $CD800;
+        font-size: 16px;
       }
     }
     .icon {
@@ -50,21 +54,49 @@
       font-family: Avenir-Heavy, Arial, Helvetica, sans-serif;
     }
   }
+  .noResults {
+    width: 60%;
+    margin: 5vw auto;
+    margin-bottom: calc(100vh - 40vw);
+    text-align: center;
+  }
+}
+.ContentMovies {
+  width: 90%;
+  margin: 0 auto 40px;
+  .contentCards {
+    list-style: none;
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+    grid-gap: 3vw 1.6%;
+    gap: 3vw 1.6%;
+    grid-template-columns: 22% 22% 22% 22%;
+  }
+}
+@media (max-width: 768px) {
   .ContentMovies {
-    width: 90%;
-    margin: 0 auto;
-    ul {
-      list-style: none;
-      display: grid;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      margin: 0;
-      padding: 0;
-      grid-gap: 1.5vw 1.6%;
-      gap: 1.5vw 1.6%;
-      grid-template-columns: 24% 24% 24% 24%;
-      li {
+    .contentCards {
+      grid-template-columns: 30% 30% 30%;
+    }
+  }
+}
+@media (max-width: 414px) {
+  .ContentSearch {
+    .search {
+      width: 90%;
+      input {
+        padding-right: 10%;
       }
+    }
+  }
+  .ContentMovies {
+    .contentCards {
+      grid-gap: 10vw 1.6%;
+      gap: 10vw 1.6%;
+      grid-template-columns: 100%;
     }
   }
 }
