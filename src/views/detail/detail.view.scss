@@ -1,0 +1,70 @@
+@import "../../assets/styles/global.scss";
+.detail {
+  background-color: $B100;
+  padding: 16px 2%;
+  .title {
+    font-family: Avenir-Heavy, Arial, Helvetica, sans-serif;
+    color: $CD800;
+    margin: 16px 0;
+    text-align: center;
+  }
+  .contentDescription {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    .description {
+      width: 40%;
+      padding: 2% 1%;
+      h2 {
+        text-align: center;
+      }
+      h3 {
+        margin: 3px 0;
+      }
+      a {
+        color: $CD800;
+      }
+    }
+    .contentImage {
+      width: 57%;
+      img {
+        width: 100%;
+        border-radius: 0.5vw;
+      }
+    }
+  }
+  .productionCompanies {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100px;
+    margin-top: 2%;
+    .producer {
+      max-height: 50%;
+      margin-left: 5%;
+      img {
+        height: 95%;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .detail {
+    padding: 16px 5%;
+    .contentDescription {
+      .description {
+        width: 100%;
+        padding: 2% 1%;
+        order: 2;
+      }
+      .contentImage {
+        width: 100%;
+        order: 1;
+      }
+    }
+    .productionCompanies {
+      order: 3;
+    }
+  }
+}
